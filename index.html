@@ -35,11 +35,12 @@
             line-height: 1.6;
             max-width: 700px;
             margin: auto;
+            font-size: 16px;
         }
 
         .btn {
             display: inline-block;
-            margin-top: 30px;
+            margin-top: 15px;
             padding: 12px 25px;
             background: #38bdf8;
             color: black;
@@ -53,19 +54,53 @@
             background: #0ea5e9;
         }
 
-        iframe {
-            width: 100%;
-            height: 600px;
-            margin-top: 40px;
-            border-radius: 10px;
-            border: none;
-        }
-
         .card {
             background: #1e293b;
             padding: 30px;
             border-radius: 15px;
             margin-top: 30px;
+        }
+
+        /* CV container */
+        .cv-container {
+            width: 100%;
+            margin-top: 30px;
+        }
+
+        .cv-frame {
+            width: 100%;
+            height: 90vh;
+            border: none;
+            border-radius: 10px;
+        }
+
+        /* 📱 Mobile optimization */
+        @media (max-width: 768px) {
+
+            h1 {
+                font-size: 26px;
+            }
+
+            h2 {
+                font-size: 18px;
+            }
+
+            p {
+                font-size: 14px;
+            }
+
+            .container {
+                padding: 20px;
+            }
+
+            .cv-frame {
+                height: 75vh;
+            }
+
+            .btn {
+                width: 90%;
+                margin-top: 10px;
+            }
         }
     </style>
 </head>
@@ -78,19 +113,31 @@
     <h2>AI Engineering Student</h2>
 
     <div class="card">
-<p>
-    Passionate AI engineering student with a strong background in software development,
-    machine learning, and system design. Experienced in building intelligent systems,
-    recommendation engines, and full-stack applications. Particularly interested in
-    generative AI and agentic systems, with a focus on developing impactful and
-    scalable AI-driven solutions. Continuously improving problem-solving skills and
-    exploring cutting-edge technologies in artificial intelligence.
-</p>
+        <p>
+            Passionate AI engineering student with a strong background in software development,
+            machine learning, and system design. Experienced in building intelligent systems,
+            recommendation engines, and full-stack applications. Particularly interested in
+            generative AI and agentic systems, with a focus on developing impactful and
+            scalable AI-driven solutions. Continuously improving problem-solving skills and
+            exploring cutting-edge technologies in artificial intelligence.
+        </p>
     </div>
 
-    <a href="CV_rhouli_mohamed_mounim.pdf" target="_blank" class="btn">📄 Download My CV</a>
+    <!-- Buttons -->
+    <a href="CV_rhouli_mohamed_mounim.pdf" target="_blank" class="btn">
+        📄 Download My CV
+    </a>
 
-    <iframe src="CV_rhouli_mohamed_mounim.pdf" style="width:100%; height:100vh;"></iframe>
+    <br>
+
+    <a href="CV_rhouli_mohamed_mounim.pdf" target="_blank" class="btn">
+        📱 Open Full Screen CV
+    </a>
+
+    <!-- Embedded CV -->
+    <div class="cv-container">
+        <iframe src="CV_rhouli_mohamed_mounim.pdf#zoom=page-width" class="cv-frame"></iframe>
+    </div>
 
 </div>
 

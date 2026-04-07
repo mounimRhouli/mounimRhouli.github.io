@@ -49,6 +49,9 @@
         .cv-container {
             width: 100%;
             margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         .cv-frame {
@@ -58,27 +61,33 @@
             border-radius: 10px;
         }
 
+        /* Professional Button Style */
+        .view-btn {
+            display: inline-block;
+            background: #38bdf8;
+            color: #0f172a;
+            padding: 15px 35px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(56, 189, 248, 0.3);
+        }
+
+        .view-btn:hover {
+            background: #7dd3fc;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(56, 189, 248, 0.4);
+        }
+
         /* Mobile optimization */
         @media (max-width: 768px) {
-            h1 {
-                font-size: 26px;
-            }
-
-            h2 {
-                font-size: 18px;
-            }
-
-            p {
-                font-size: 14px;
-            }
-
-            .container {
-                padding: 20px;
-            }
-
-            .cv-frame {
-                height: 75vh;
-            }
+            h1 { font-size: 26px; }
+            h2 { font-size: 18px; }
+            p { font-size: 14px; }
+            .container { padding: 20px; }
+            .cv-frame { height: 75vh; }
         }
     </style>
 </head>
@@ -101,9 +110,10 @@
         </p>
     </div>
 
-    <!-- Embedded CV -->
     <div class="cv-container">
-        <iframe src="CV_rhouli_mohamed_mounim.pdf#zoom=page-width" class="cv-frame"></iframe>
+        <object data="CV_rhouli_mohamed_mounim.pdf#zoom=page-width" type="application/pdf" class="cv-frame">
+            <a href="CV_rhouli_mohamed_mounim.pdf" target="_blank" class="view-btn">View CV Fullscreen</a>
+        </object>
     </div>
 
 </div>
